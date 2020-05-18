@@ -17,15 +17,13 @@ def division(a, b):
   return(a / b)
 
 # Realiza la raíz cuadrada de x, por aproximación
-def raiz_cuadrada(x):
+def raiz_cuadrada(x, error=0.00001):
   # si el número es 1 se puede producir una división por 0
   if (x == 1):
     return(1)
 
   # chequeo de seguridad
   max_iteraciones = 20
-  # error máximo
-  error = 0.00001
   
   # Encontrar el valor más cercano a solución, iterando
   p = 1
