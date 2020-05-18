@@ -4,6 +4,6 @@
 def suma(a, b):
   return(a + b)
 
-# Stub para test
+# Realiza la resta sobre el argumento a de b
 def resta(a, b):
-  return(7)
+  return(a - b)
