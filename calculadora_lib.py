@@ -15,3 +15,7 @@ def multiplicacion(a, b):
 # Realiza la división de a por b
 def division(a, b):
   return(a / b)
+
+# Stub para test
+def raiz_cuadrada(numero):
+  return(12.28821)

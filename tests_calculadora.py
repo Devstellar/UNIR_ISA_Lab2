@@ -3,7 +3,7 @@
 import unittest
 from parameterized import parameterized
 
-from calculadora_lib import suma, resta, multiplicacion, division
+from calculadora_lib import suma, resta, multiplicacion, division, raiz_cuadrada
 
 class Tests_Calculadora(unittest.TestCase):
   # Arrange
@@ -57,6 +57,19 @@ class Tests_Calculadora(unittest.TestCase):
     res_division = division(a, b)
     # Assert
     self.assertEqual(res_division, res_correcto)
+
+  # Arrange
+  @parameterized.expand([
+    [61, 7.810249675906654],
+    [35, 5.916079783099616],
+    [151, 12.288205727444508],
+    [273, 16.522711641858304],
+  ])
+  def test_raiz_cuadrada(self, numero, res_correcto):
+    # Act
+    res_raiz_cuadrada = raiz_cuadrada(numero)
+    # Assert
+    self.assertLess(abs(res_correcto - res_raiz_cuadrada), 0.00001)
 
 if __name__ == "__main__":
   unittest.main()
