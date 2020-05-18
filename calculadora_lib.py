@@ -11,3 +11,7 @@ def resta(a, b):
 # Realiza la multiplicación de a y b
 def multiplicacion(a, b):
   return(a*b)
+
+# Stub para test
+def division(a, b):
+  return(8.714285714285714)

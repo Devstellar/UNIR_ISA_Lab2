@@ -3,7 +3,7 @@
 import unittest
 from parameterized import parameterized
 
-from calculadora_lib import suma, resta, multiplicacion
+from calculadora_lib import suma, resta, multiplicacion, division
 
 class Tests_Calculadora(unittest.TestCase):
   # Arrange
@@ -44,6 +44,19 @@ class Tests_Calculadora(unittest.TestCase):
     res_multiplicacion = multiplicacion(a, b)
     # Assert
     self.assertEqual(res_multiplicacion, res_correcto)
+
+  # Arrange
+  @parameterized.expand([
+    [61, 7, 8.714285714285714],
+    [-31, 17, -1.8235294117647058],
+    [51, -9, -5.666666666666667],
+    [-27, -11, 2.4545454545454546],
+  ])
+  def test_division(self, a, b, res_correcto):
+    # Act
+    res_division = division(a, b)
+    # Assert
+    self.assertEqual(res_division, res_correcto)
 
 if __name__ == "__main__":
   unittest.main()
