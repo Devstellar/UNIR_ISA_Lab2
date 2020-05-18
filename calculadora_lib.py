@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Stub para test
+# Realiza la suma de los argumentos a y b
 def suma(a, b):
-  return(39)
-
+  return(a + b)
