@@ -8,6 +8,6 @@ def suma(a, b):
 def resta(a, b):
   return(a - b)
 
-# Stub para test
+# Realiza la multiplicación de a y b
 def multiplicacion(a, b):
-  return(896)
+  return(a*b)
